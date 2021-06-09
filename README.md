@@ -1,21 +1,26 @@
 # FX 1-Minute Dataset (+ Crude Oil and Stock indexes)
 
-API and dataset download for [histdata.com](http://histdata.com).
+Retrieval made easy for 1-minute (and tick data). Source: http://histdata.com/.
 
-## Download the dataset
 
-- [All instruments - 1Minute - 2000 to May 2021 - Google Drive link (Full data is around 2GB)](https://drive.google.com/drive/folders/1IG_5SM3SLsxVeaDJlmL2qskex5EsTwjG?usp=sharing).
+   * Table of Contents
+      * [Dataset 1M from early 2000 to June 2019](#data-files-provided-from-early-2000-to-june-2019)
+      * [API](#api)
+         * [Re-download the dataset of the repository](#re-download-the-dataset-of-the-repository)
+         * [Examples](#examples)
+      * [Data specification](#data-specification)
+         * [DateTime Stamp](#datetime-stamp)
+         * [OPEN Bid Quote](#open-bid-quote)
+         * [HIGH Bid Quote](#high-bid-quote)
+         * [LOW Bid Quote](#low-bid-quote)
+         * [CLOSE Bid Quote](#close-bid-quote)
+         * [Volume](#volume)
 
-- You can download only what you need with the link above. For example the pair `eurusd`.
 
-- You can also re-download the whole dataset (up to date) by yourself:
 
-```bash
-pip install -r requirements.txt
-python download_all_fx_data.py
-```
+## Dataset 1M from early 2000 to June 2019
 
-Expect it to take somewhere between 10 minutes to 4 hours, depending on your internet speed.
+Available here: [2000-Jun2019](2000-Jun2019). Due to Github repository space limit policies, we will stop publishing the updated dataset on Github. Refer to the section [Re-download the dataset of the repository](#re-download-the-dataset-of-the-repository) to generate your own.
 
 
 ## API
@@ -25,6 +30,15 @@ Expect it to take somewhere between 10 minutes to 4 hours, depending on your int
 
 ```
 pip install histdata
+```
+
+### Re-download the dataset of the repository
+
+This command will re-download all the FULL 1M dataset up to today (expect the runtime to be ~4 hours).
+
+```bash
+pip install histdata
+python download_all_fx_data.py
 ```
 
 ### Examples
@@ -135,3 +149,6 @@ The close (last) bid quote of the 1M bin.
 ### Volume
 
 Number of lots. From what I saw it's always 0 here.
+
+
+
